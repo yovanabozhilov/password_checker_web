@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="user-list">
+        <h1>Registered Users</h1>
+        <ul>
+            {% for user in users %}
+                <li>
+                    <strong>{{ user.username }}</strong> — <em>{{ user.email }}</em><br>
+                    <small>{{ user.strength }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="{{ url_for('register') }}">← Back to Registration</a>
+    </div>
+</body>
+</html>

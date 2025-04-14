@@ -1,0 +1,14 @@
+[
+    {
+        "username": "yb",
+        "email": "joe@yahoo.com",
+        "password": "Yoe12345678.",
+        "strength": "Medium: Password is of medium strength."
+    },
+    {
+        "username": "yovana",
+        "email": "yovana@google.com",
+        "password": "123Yovana456.9",
+        "strength": "Strong: Password is strong and meets the criteria."
+    }
+]
