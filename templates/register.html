@@ -26,15 +26,52 @@
             <input type="email" name="email">
 
             <label>Password:</label>
-            <input type="password" name="password">
+            <div class="password-row">
+                <input type="password" name="password" id="password">
+                <button type="button" class="btn-generate" onclick="generatePassword()">Generate</button>
+                <button type="button" class="btn-toggle" onclick="togglePassword()">Show</button>
+            </div>
 
             <label>Confirm Password:</label>
-            <input type="password" name="confirm_password">
+            <input type="password" name="confirm_password" id="confirm_password">
 
             <button type="submit">Register</button>
         </form>
 
         <a href="{{ url_for('users') }}">View Registered Users</a>
     </div>
+
+    <script>
+        function generatePassword() {
+            fetch('/api/generate-password')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.password) {
+                        document.getElementById("password").value = data.password;
+                        document.getElementById("confirm_password").value = data.password;
+                    } else {
+                        alert("Error: " + data.error);
+                        console.error("Password generation error:", data);
+                    }
+                })
+                .catch(err => {
+                    alert("Request failed");
+                    console.error("Fetch error:", err);
+                });
+        }
+        
+        function togglePassword() {
+            const pwd = document.getElementById("password");
+            const toggleBtn = document.querySelector(".btn-toggle");
+            if (pwd.type === "password") {
+                pwd.type = "text";
+                toggleBtn.textContent = "Hide";
+            } else {
+                pwd.type = "password";
+                toggleBtn.textContent = "Show";
+            }
+        }
+    </script>
+        
 </body>
 </html>

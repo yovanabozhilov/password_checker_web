@@ -10,5 +10,23 @@
         "email": "yovana@google.com",
         "password": "123Yovana456.9",
         "strength": "Strong: Password is strong and meets the criteria."
+    },
+    {
+        "username": "zoya_z",
+        "email": "zoya@google.com",
+        "password": "$2b$12$ZwikpZKHxTbGBrXO2Lj6R.0TiCsgRhhi.aeNLYxIpLn3XAOFu63LS",
+        "strength": "Strong: Password is strong and meets the criteria."
+    },
+    {
+        "username": "maya_m",
+        "email": "maya@gmail.com",
+        "password": "$2b$12$C8M0eH1nEelquB.WP4vUJeDvo3cumFKltYQcPN/aK6bKkuC3xv07y",
+        "strength": "Strong: Password is strong and meets the criteria."
+    },
+    {
+        "username": "sara_g",
+        "email": "sara@google.com",
+        "password": "$2b$12$haRvrLNWNbo8PGTL9UYhCubLweOFepjAtjn.9yitWF2inQLZ733Bi",
+        "strength": "Strong: Password is strong and meets the criteria."
     }
 ]

@@ -105,3 +105,37 @@ a:hover {
     background: #f9f9f9;
     border-radius: 4px;
 }
+
+.password-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.password-row input {
+    flex: 1;
+    margin-bottom: 0; 
+}
+
+.password-row .btn-generate,
+.password-row .btn-toggle {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-generate {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-toggle {
+    background-color: #6c757d;
+    color: white;
+}
